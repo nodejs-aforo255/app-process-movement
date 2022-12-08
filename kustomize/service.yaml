@@ -1,0 +1,14 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name: app-service-process-movement
+spec:
+  type: LoadBalancer
+  selector:
+    app: service-process-movement
+  ports:
+  - protocol: TCP
+    port: 8080
+    targetPort: 5005
+    name: http
+ 
